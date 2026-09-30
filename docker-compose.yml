@@ -1,0 +1,17 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: herrera_system_api
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=production
+      - ConnectionStrings__DefaultConnection=Server=${DB_SERVER:-host.docker.internal},${DB_PORT:-1433};Database=${DB_NAME:-HerreraSystem};User Id=${DB_USER:-sa};Password=${DB_PASSWORD:-Cambiar_Esta_Clave_123!};TrustServerCertificate=True;
+      - JwtSettings__SecretKey=${JWT_SECRET_KEY:-"whVbOfKjgO94KneZvxelxxmXi8bWgCmdebm5Wef3"}
+      - JwtSettings__Issuer=${JWT_ISSUER:-"Https://sorbeteriaherrera.com"}
+      - JwtSettings__Audience=${JWT_AUDIENCE:-"Https://sorbeteriaherrera.com"}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
