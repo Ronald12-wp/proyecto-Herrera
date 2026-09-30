@@ -5,7 +5,6 @@ WORKDIR /src
 # Copiar archivos .csproj de cada proyecto para restaurar dependencias
 COPY ["HerreraSystemAPI/HerreraSystemAPI.csproj", "HerreraSystemAPI/"]
 COPY ["HerreraSystem.Application/HerreraSystem.Application.csproj", "HerreraSystem.Application/"]
-COPY ["HerreraSystem.Domain/HerreraSystem.Domain.csproj", "HerreraSystem.Domain/"]
 COPY ["HerreraSystem.Infrastructure/HerreraSystem.Infrastructure.csproj", "HerreraSystem.Infrastructure/"]
 COPY ["HerreraSystemDomain/HerreraSystemDomain.csproj", "HerreraSystemDomain/"]
 COPY ["HerreraSystem.Tests/HerreraSystem.Tests.csproj", "HerreraSystem.Tests/"]
