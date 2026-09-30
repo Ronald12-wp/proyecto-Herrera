@@ -6,7 +6,7 @@ WORKDIR /src
 COPY ["HerreraSystemAPI/HerreraSystemAPI.csproj", "HerreraSystemAPI/"]
 COPY ["HerreraSystem.Application/HerreraSystem.Application.csproj", "HerreraSystem.Application/"]
 COPY ["HerreraSystem.Infrastructure/HerreraSystem.Infrastructure.csproj", "HerreraSystem.Infrastructure/"]
-COPY ["HerreraSystemDomain/HerreraSystemDomain.csproj", "HerreraSystemDomain/"]
+COPY ["HerreraSystem.Domain/HerreraSystem.Domain.csproj", "HerreraSystem.Domain/"]
 COPY ["HerreraSystem.Tests/HerreraSystem.Tests.csproj", "HerreraSystem.Tests/"]
 RUN dotnet restore "HerreraSystemAPI/HerreraSystemAPI.csproj"  
 
