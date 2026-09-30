@@ -8,8 +8,7 @@ COPY ["HerreraSystem.Application/HerreraSystem.Application.csproj", "HerreraSyst
 COPY ["HerreraSystem.Domain/HerreraSystem.Domain.csproj", "HerreraSystem.Domain/"]
 COPY ["HerreraSystem.Infrastructure/HerreraSystem.Infrastructure.csproj", "HerreraSystem.Infrastructure/"]
 COPY ["HerreraSystemDomain/HerreraSystemDomain.csproj", "HerreraSystemDomain/"]
-
-# Restaurar dependencias
+COPY ["HerreraSystem.Tests/HerreraSystem.Tests.csproj", "HerreraSystem.Tests/"]
 RUN dotnet restore "HerreraSystemAPI/HerreraSystemAPI.csproj"  
 
 # copiar el resto del codigo 
